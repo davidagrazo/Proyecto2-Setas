@@ -26,8 +26,8 @@ def main():
         default_index=0,
         orientation="horizontal")
     if seleccion == "INFO":
+        inicio()     
         
-        pass
 
     if seleccion == "SPANISH VERSION":
         proyecto2es()
