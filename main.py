@@ -10,12 +10,14 @@ def main():
         page_icon=":mushroom:")
 
     st.title("SEGUNDO PROYECTO -- MACHINE LEARNING")
-
-    liuva = st.link_button("Liuva Nuñez-Castelo ", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/")
-    alex = st.link_button("Alex Garea", "https://www.linkedin.com/in/alex-garea-4981a6282/")
-    david = st.link_button("David Agrazo ", "https://www.linkedin.com/in/davidagrazods/")
+    st.markdown('<div style="text-align: justify;">Creadores:</p></div>',
+        unsafe_allow_html=True))
+    col1, col2, col3 = st.columns(3)
+    col1.link_button("Liuva Nuñez-Castelo ", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/")
+    col2.link_button("Alex Garea", "https://www.linkedin.com/in/alex-garea-4981a6282/")
+    col3.link_button("David Agrazo ", "https://www.linkedin.com/in/davidagrazods/")
     
-    st.write([liuva, alex, david])
+   
 
     seleccion = option_menu(
         menu_title=None,
