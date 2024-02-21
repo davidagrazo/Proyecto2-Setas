@@ -10,7 +10,7 @@ def main():
         page_icon=":mushroom:")
 
     st.title("SEGUNDO PROYECTO -- MACHINE LEARNING")
-    st.markdown('<div style="text-align: justify;">Creadores:</p></div>',
+    st.markdown('<div style="text-align: justify;">CREADORES:</p></div>',
         unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     col1.link_button("Liuva Nuñez-Castelo ", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/")

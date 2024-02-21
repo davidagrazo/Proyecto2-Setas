@@ -13,6 +13,11 @@ def inicio():
     st.markdown(
         '<div style="text-align: justify;">Para esta ocasión nos decidimos a usar un dataset de Setas de la UCI Machine Learning Repository</p></div>', unsafe_allow_html=True)
 
+    add_vertical_space(1)
+
+    st.markdown(
+        '<div style="text-align: justify;">Analizamos las partes que componen una seta y pasamos a realizar el EDA para revisar la estructura de los datos</p></div>', unsafe_allow_html=True)
+
     st.page_link("https://archive.ics.uci.edu/dataset/73/mushroom", label="DATASET UCI", icon="🏫")
     
 
