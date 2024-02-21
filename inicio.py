@@ -13,7 +13,7 @@ def inicio():
     st.markdown(
         '<div style="text-align: justify;">Para esta ocasión nos decidimos a usar un dataset de Setas de la UCI Machine Learning Repository</p></div>', unsafe_allow_html=True)
 
-    st.page_link("https://archive.ics.uci.edu/dataset/73/mushroom", label="MUSHROOMS", icon="🏫")
+    st.page_link("https://archive.ics.uci.edu/dataset/73/mushroom", label="DATASET UCI", icon="🏫")
     
 
 
