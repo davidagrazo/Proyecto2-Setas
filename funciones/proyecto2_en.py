@@ -22,8 +22,8 @@ def proyecto2en():
 
     st.subheader("ML'S MODEL: MUSHROOMS, ¿EDIBLES O POISONOUS?")
 
-    df = pd.read_csv("proyecto2/mushrooms_eda.csv").drop('CLASS', axis=1)
-    df2 = pd.read_csv("proyecto2/mushrooms_eda.csv")
+    df = pd.read_csv("funciones/mushrooms_eda.csv").drop('CLASS', axis=1)
+    df2 = pd.read_csv("funciones/mushrooms_eda.csv")
 
     with st.expander(label="DataFrame", expanded=False):
         st.dataframe(df2)
@@ -100,7 +100,7 @@ def proyecto2en():
 
     prediccion = tuple([x for x in datos if not x == None])
     prediccion_list = [x for x in datos if not x == None]
-    with open('proyecto2/dicc_en.pkl', 'rb') as file:
+    with open('funciones/dicc_en.pkl', 'rb') as file:
         diccionario = pickle.load(file)
 
     col3.header('PREDICTION')

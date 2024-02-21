@@ -9,7 +9,7 @@ from sklearn.metrics import recall_score
 import pandas as pd
 
 def modelo_filtrado(dato):
-    df = pd.read_csv("proyecto2/modelo.csv")
+    df = pd.read_csv("funciones/modelo.csv")
     filtro = [c for c in df.columns if c.startswith(dato)]
     X = df[filtro]
     y = df["class"]
