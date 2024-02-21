@@ -22,8 +22,8 @@ def proyecto2es():
 
     st.subheader("MODELO DE ML: SETAS, ¿COMESTIBLES O VENENOSAS?")
 
-    df = pd.read_csv("proyecto2/setas.csv").drop('class', axis=1)
-    df2 = pd.read_csv("proyecto2/setas.csv")
+    df = pd.read_csv("funciones/setas.csv").drop('class', axis=1)
+    df2 = pd.read_csv("funciones/setas.csv")
 
     with st.expander(label="DataFrame", expanded=False):
         st.dataframe(df2)
@@ -100,7 +100,7 @@ def proyecto2es():
 
     prediccion = tuple([x for x in datos if not x == None])
     prediccion_list = [x for x in datos if not x == None]
-    with open('proyecto2/dicc.pkl', 'rb') as file:
+    with open('funciones/dicc.pkl', 'rb') as file:
         diccionario = pickle.load(file)
 
     col3.header('Prediccion')
