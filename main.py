@@ -10,15 +10,15 @@ def main():
 
     seleccion = st.sidebar.selectbox(
         label="Menu",
-        options=["SPANISH VERSION :es:", "ENGLISH VERSION :uk:"])
+        options=["SPANISH VERSION:es:", "ENGLISH VERSION :uk:"])
 
-    if seleccion == "SPANISH VERSION :es:":
+    if seleccion == "SPANISH VERSION:es:":
         proyecto2es()
     
     if seleccion == "ENGLISH VERSION :uk:":
         proyecto2en()
 
-    st.sidebar.link_button("Liuva Nuñez-Castelo :sunglasses:", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/")
+    st.sidebar.link_button("Liuva Nuñez-Castelo :flag-gb:", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/")
     st.sidebar.page_link("https://www.linkedin.com/in/alex-garea-4981a6282/", label="Alex Garea")
     st.sidebar.page_link("https://www.linkedin.com/in/davidagrazods/", label="David Agrazo")
     
