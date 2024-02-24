@@ -18,7 +18,7 @@ def main():
     if seleccion == "ENGLISH VERSION":
         proyecto2en()
 
-    st.sidebar.page_link("https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/", label="Liuva Nuñez-Castelo")
+    st.sidebar.link_button("Liuva Nuñez-Castelo :linkedin:", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/", label=)
     st.sidebar.page_link("https://www.linkedin.com/in/alex-garea-4981a6282/", label="Alex Garea")
     st.sidebar.page_link("https://www.linkedin.com/in/davidagrazods/", label="David Agrazo")
     
