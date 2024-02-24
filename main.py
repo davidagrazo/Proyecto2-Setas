@@ -9,12 +9,11 @@ def main():
         page_title="PROYECTO 2 BOOTCAMP DSB05RT HACKABOSS",
         page_icon=":mushroom:")
 
-    st.markdown('<div style="text-align: justify;">CREADORES:</p></div>',
-        unsafe_allow_html=True)
-    col1, col2, col3 = st.columns(3)
-    col1.page_link("https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/", label="Liuva Nuñez-Castelo ")
-    col2.page_link("https://www.linkedin.com/in/alex-garea-4981a6282/", label="Alex Garea")
-    col3.page_link("https://www.linkedin.com/in/davidagrazods/", label="David Agrazo")
+    st.sidebar(label= "CREADORES")
+    
+    st.sidebar.page_link("https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/", label="Liuva Nuñez-Castelo ")
+    st.sidebar.page_link("https://www.linkedin.com/in/alex-garea-4981a6282/", label="Alex Garea")
+    st.sidebar.page_link("https://www.linkedin.com/in/davidagrazods/", label="David Agrazo")
     
    
 
