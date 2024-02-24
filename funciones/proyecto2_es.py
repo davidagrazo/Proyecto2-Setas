@@ -9,7 +9,7 @@ def proyecto2es():
     st.title("PROYECTO 2: CREACION DE UN MODELO DE MACHINE LEARNING PARA DETECTAR SI UNA SETA ES VENENOSA O COMESTIBLE")
     uci = st.page_link("https://archive.ics.uci.edu/dataset/73/mushroom", label="UCI Machine Learning Repository")
     st.markdown(
-        f'<div style="text-align: justify;">Basandonos en el DataFrame de {uci}, empezamos a realizar nuestro segundo proyecto</p></div>',
+        '<div style="text-align: justify;">f"Basandonos en el DataFrame de {uci}, empezamos a realizar nuestro segundo proyecto"</p></div>',
         unsafe_allow_html=True)
     st.markdown(
         '<div style="text-align: justify;">Tras un estudio de cualés eran las partes y características que componen una seta, y la información encontrada en el Dataset, realizamos el EDA y el preprocesado de los datos. Dividimos el análisis de los datos por las partes que componen la seta, para una mejor explicación de los mismos.</p></div>',
