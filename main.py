@@ -9,7 +9,6 @@ def main():
         page_title="PROYECTO 2 BOOTCAMP DSB05RT HACKABOSS",
         page_icon=":mushroom:")
 
-    st.title("SEGUNDO PROYECTO -- MACHINE LEARNING")
     st.markdown('<div style="text-align: justify;">CREADORES:</p></div>',
         unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
