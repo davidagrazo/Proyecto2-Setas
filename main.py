@@ -19,16 +19,13 @@ def main():
     
    
 
-    seleccion = option_menu(
-        menu_title=None,
-        options=["INFO", "SPANISH VERSION", "ENGLISH VERSION"],
-        icons=["info-circle","flag", "flag-fill"],
-        default_index=0,
-        orientation="horizontal")
+    seleccion = st.sidebar.selectbox(
+        label="Menu",
+        options=["INFO", "SPANISH VERSION", "ENGLISH VERSION"])
+
     if seleccion == "INFO":
         inicio()     
         
-
     if seleccion == "SPANISH VERSION":
         proyecto2es()
     
