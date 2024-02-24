@@ -10,12 +10,12 @@ def main():
 
     seleccion = st.sidebar.selectbox(
         label="Menu",
-        options=["SPANISH VERSION:es:", "ENGLISH VERSION :uk:"])
+        options=["SPANISH VERSION", "ENGLISH VERSION"])
 
-    if seleccion == "SPANISH VERSION:es:":
+    if seleccion == "SPANISH VERSION:":
         proyecto2es()
     
-    if seleccion == "ENGLISH VERSION :uk:":
+    if seleccion == "ENGLISH VERSION":
         proyecto2en()
 
     st.sidebar.link_button("Liuva Nuñez-Castelo :flag-gb:", "https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/")
