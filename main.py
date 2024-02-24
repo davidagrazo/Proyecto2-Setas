@@ -11,7 +11,7 @@ def main():
 
     
     
-    st.sidebar.page_link("https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/", label="Liuva Nuñez-Castelo ")
+    st.sidebar.page_link("https://www.linkedin.com/in/liuva-nu%C3%B1ez-castelo/", label="Liuva Nuñez-Castelo", page_icon=":smile:")
     st.sidebar.page_link("https://www.linkedin.com/in/alex-garea-4981a6282/", label="Alex Garea")
     st.sidebar.page_link("https://www.linkedin.com/in/davidagrazods/", label="David Agrazo")
     
