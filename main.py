@@ -12,7 +12,7 @@ def main():
         label="Menu",
         options=["SPANISH VERSION", "ENGLISH VERSION"])
 
-    if seleccion == "SPANISH VERSION:":
+    if seleccion == "SPANISH VERSION":
         proyecto2es()
     
     if seleccion == "ENGLISH VERSION":
