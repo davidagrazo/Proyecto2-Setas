@@ -28,8 +28,8 @@ def proyecto2es():
     df = pd.read_csv("funciones/setas.csv").drop('class', axis=1)
     df2 = pd.read_csv("funciones/setas.csv")
 
-    with st.expander(label="DataFrame", expanded=False):
-        tab2.dataframe(df2)
+    with tab2.expander(label="DataFrame", expanded=False):
+        st.dataframe(df2)
 
     sombrero = [x for x in df.columns if 'sombrero' in x]
 
