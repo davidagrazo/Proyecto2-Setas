@@ -21,13 +21,15 @@ def proyecto2es():
         '<div style="text-align: justify;">Eso nos hizo revisar el proyecto para darle un poco más de valor al mismo, y decidimos comprobar para cada tipo de característica cual sería la precisión del mismo. Para realizar la predicción nos quedamos con el modelo de RandomForest. Os animamos a que elijáis entre las diferentes opciones para la comprobacion de si una 🍄 es comestible o venenosa</p></div>',
         unsafe_allow_html=True)
 
-    st.subheader("MODELO DE ML: SETAS, ¿COMESTIBLES O VENENOSAS?")
+    tab1, tab2 = st.tabs("EDA", "MACHILE LEARNING")
+
+    tab2.subheader("MODELO DE ML: SETAS, ¿COMESTIBLES O VENENOSAS?")
 
     df = pd.read_csv("funciones/setas.csv").drop('class', axis=1)
     df2 = pd.read_csv("funciones/setas.csv")
 
-    with st.expander(label="DataFrame", expanded=False):
-        st.dataframe(df2)
+    with tab2.expander(label="DataFrame", expanded=False):
+        tab2.dataframe(df2)
 
     sombrero = [x for x in df.columns if 'sombrero' in x]
 
@@ -40,13 +42,13 @@ def proyecto2es():
     datos = []
     seleccion = []
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = tab2.columns(3)
     with col1:
-        st.header('Sombrero')
+        tab2.header('Sombrero')
         # Sombrero
         for column in df[sombrero].columns.to_list():
             dato_sombrero = ["All"] + list(df[column].unique())
-            sombreros = st.selectbox(label= f"{column}",
+            sombreros = tab2.selectbox(label= f"{column}",
                              options=dato_sombrero,
                              index=0)
             datos.append(f"{column}" if sombreros != "All" else None)
@@ -54,11 +56,11 @@ def proyecto2es():
                 seleccion.append(sombreros)
 
     with col2:
-        st.header('Laminas')
+        tab2.header('Laminas')
         # Laminas
         for column in df[lamina].columns.to_list():
             dato_laminas = ["All"] + list(df[column].unique())
-            laminas = st.selectbox(label=f"{column}",
+            laminas = tab2.selectbox(label=f"{column}",
                          options=dato_laminas,
                          index=0)
             datos.append(f"{column}" if laminas != "All" else None)
@@ -66,11 +68,11 @@ def proyecto2es():
                 seleccion.append(laminas)
 
     with col3:
-        st.header('Tallo')
+        tab2.header('Tallo')
         # Tallo
         for column in df[tallo].columns.to_list():
             dato_tallo = ["All"] + list(df[column].unique())
-            tallos = st.selectbox(label=f"{column}",
+            tallos = tab2.selectbox(label=f"{column}",
                          options=dato_tallo,
                          index=0)
             datos.append(f"{column}" if tallos != "All" else None)
@@ -78,10 +80,10 @@ def proyecto2es():
                 seleccion.append(tallos)
 
     with col1:
-        st.header('Otras Caract.')
+        tab2.header('Otras Caract.')
         for column in df[resto[:3]].columns.to_list():
             dato_otros = ["All"] + list(df[column].unique())
-            otros_1 = st.selectbox(label=f"{column}",
+            otros_1 = tab2.selectbox(label=f"{column}",
                          options=dato_otros,
                          index=0)
             datos.append(f"{column}" if otros_1 != "All" else None)
@@ -89,10 +91,10 @@ def proyecto2es():
                 seleccion.append(otros_1)
 
     with col2:
-        st.header('Otros')
+        tab2.header('Otros')
         for column in df[resto[4:]].columns.to_list():
             dato_otros = ["All"] + list(df[column].unique())
-            otros_2 = st.selectbox(label=f"{column}",
+            otros_2 = tab2.selectbox(label=f"{column}",
                          options=dato_otros,
                          index=0)
             datos.append(f"{column}" if otros_2 != "All" else None)
