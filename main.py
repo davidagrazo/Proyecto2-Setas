@@ -12,7 +12,7 @@ def main():
     seleccion = st.sidebar.selectbox(
         label="MENU",
         options=["INICIO", "SPANISH VERSION", "ENGLISH VERSION"])
-    if seleccion = "INICIO":
+    if seleccion == "INICIO":
         inicio()
 
     if seleccion == "SPANISH VERSION":
