@@ -28,7 +28,7 @@ def proyecto2es():
     df = pd.read_csv("funciones/setas.csv").drop('class', axis=1)
     df2 = pd.read_csv("funciones/setas.csv")
 
-    with tab2.expander(label="DataFrame", expanded=False):
+    with st.expander(label="DataFrame", expanded=False):
         tab2.dataframe(df2)
 
     sombrero = [x for x in df.columns if 'sombrero' in x]
@@ -44,11 +44,11 @@ def proyecto2es():
 
     col1, col2, col3 = tab2.columns(3)
     with col1:
-        tab2.header('Sombrero')
+        st.header('Sombrero')
         # Sombrero
         for column in df[sombrero].columns.to_list():
             dato_sombrero = ["All"] + list(df[column].unique())
-            sombreros = tab2.selectbox(label= f"{column}",
+            sombreros = st.selectbox(label= f"{column}",
                              options=dato_sombrero,
                              index=0)
             datos.append(f"{column}" if sombreros != "All" else None)
@@ -56,11 +56,11 @@ def proyecto2es():
                 seleccion.append(sombreros)
 
     with col2:
-        tab2.header('Laminas')
+        st.header('Laminas')
         # Laminas
         for column in df[lamina].columns.to_list():
             dato_laminas = ["All"] + list(df[column].unique())
-            laminas = tab2.selectbox(label=f"{column}",
+            laminas = st.selectbox(label=f"{column}",
                          options=dato_laminas,
                          index=0)
             datos.append(f"{column}" if laminas != "All" else None)
@@ -68,11 +68,11 @@ def proyecto2es():
                 seleccion.append(laminas)
 
     with col3:
-        tab2.header('Tallo')
+        st.header('Tallo')
         # Tallo
         for column in df[tallo].columns.to_list():
             dato_tallo = ["All"] + list(df[column].unique())
-            tallos = tab2.selectbox(label=f"{column}",
+            tallos = st.selectbox(label=f"{column}",
                          options=dato_tallo,
                          index=0)
             datos.append(f"{column}" if tallos != "All" else None)
@@ -80,10 +80,10 @@ def proyecto2es():
                 seleccion.append(tallos)
 
     with col1:
-        tab2.header('Otras Caract.')
+        st.header('Otras Caract.')
         for column in df[resto[:3]].columns.to_list():
             dato_otros = ["All"] + list(df[column].unique())
-            otros_1 = tab2.selectbox(label=f"{column}",
+            otros_1 = st.selectbox(label=f"{column}",
                          options=dato_otros,
                          index=0)
             datos.append(f"{column}" if otros_1 != "All" else None)
@@ -91,10 +91,10 @@ def proyecto2es():
                 seleccion.append(otros_1)
 
     with col2:
-        tab2.header('Otros')
+        st.header('Otros')
         for column in df[resto[4:]].columns.to_list():
             dato_otros = ["All"] + list(df[column].unique())
-            otros_2 = tab2.selectbox(label=f"{column}",
+            otros_2 = st.selectbox(label=f"{column}",
                          options=dato_otros,
                          index=0)
             datos.append(f"{column}" if otros_2 != "All" else None)
