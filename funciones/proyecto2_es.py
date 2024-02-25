@@ -21,7 +21,7 @@ def proyecto2es():
         '<div style="text-align: justify;">Eso nos hizo revisar el proyecto para darle un poco más de valor al mismo, y decidimos comprobar para cada tipo de característica cual sería la precisión del mismo. Para realizar la predicción nos quedamos con el modelo de RandomForest. Os animamos a que elijáis entre las diferentes opciones para la comprobacion de si una 🍄 es comestible o venenosa</p></div>',
         unsafe_allow_html=True)
 
-    tab1, tab2 = st.tabs("EDA", "MACHILE LEARNING")
+    tab1, tab2 = st.tabs(["EDA", "MACHILE LEARNING"])
 
     tab2.subheader("MODELO DE ML: SETAS, ¿COMESTIBLES O VENENOSAS?")
 
