@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from inicio import inicio
 from funciones.proyecto2_es import proyecto2es
 from funciones.proyecto2_en import proyecto2en
 
@@ -10,7 +11,9 @@ def main():
 
     seleccion = st.sidebar.selectbox(
         label="MENU",
-        options=["SPANISH VERSION", "ENGLISH VERSION"])
+        options=["INICIO", "SPANISH VERSION", "ENGLISH VERSION"])
+    if seleccion = "INICIO":
+        inicio()
 
     if seleccion == "SPANISH VERSION":
         proyecto2es()
