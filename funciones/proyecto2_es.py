@@ -18,10 +18,16 @@ def proyecto2es():
         '<div style="text-align: justify;">En el EDA nos dimos cuenta que algunas características tenían un gran peso a la hora de predecir el resultado, que se refrendó al probar los diferentes modelos de clasificación de Machine Learning, donde la mayoría de los modelos daban un 100% de Accuracy, Precision y Recall</p></div>',
         unsafe_allow_html=True)
     st.markdown(
-        '<div style="text-align: justify;">Eso nos hizo revisar el proyecto para darle un poco más de valor al mismo, y decidimos comprobar para cada tipo de característica cual sería la precisión del mismo. Para realizar la predicción nos quedamos con el modelo de RandomForest. Os animamos a que elijáis entre las diferentes opciones para la comprobacion de si una 🍄 es comestible o venenosa</p></div>',
+        '<div style="text-align: justify;">Eso nos hizo revisar el proyecto para darle un poco más de valor al mismo, y decidimos comprobar para cada tipo de característica cual sería la precisión del mismo. Para realizar la predicción nos quedamos con el modelo de RandomForest.</p></div>',
         unsafe_allow_html=True)
+    st.markdown(
+            '<div style="text-align: justify;">Para que veáis el trabajo realizado, os dejamos la zona de EDA, donde podréis comprobar como se distribuyen los datos por característica. En la parte del modelo, os animamos a que elijáis entre las diferentes opciones para la comprobacion de si una 🍄 es comestible o venenosa</p></div>',
+            unsafe_allow_html=True)
+
 
     tab1, tab2 = st.tabs(["EDA", "MACHILE LEARNING"])
+    
+    tab1.subheader("EDA")
 
     tab2.subheader("MODELO DE ML: SETAS, ¿COMESTIBLES O VENENOSAS?")
 
