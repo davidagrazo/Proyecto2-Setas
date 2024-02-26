@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pickle
 import pandas as pd
+from funciones.eda_es import eda_es
 from funciones.ml import modelo_filtrado
 
 
@@ -28,6 +29,9 @@ def proyecto2es():
     tab1, tab2 = st.tabs(["EDA", "MACHILE LEARNING"])
     
     tab1.subheader("EDA")
+
+    with tab1:
+        eda_es()
 
     tab2.subheader("MODELO DE ML: SETAS, ¿COMESTIBLES O VENENOSAS?")
 
