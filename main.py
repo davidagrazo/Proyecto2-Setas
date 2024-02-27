@@ -24,7 +24,7 @@ def main():
     st.sidebar.link_button("Alex Garea", "https://www.linkedin.com/in/alex-garea-4981a6282/")
     st.sidebar.link_button("David Agrazo", "https://www.linkedin.com/in/davidagrazods/")
 
-    st.sidebar..link_button("KAGGLE", "https://www.kaggle.com/code/davidagrazo/proyecto-2-setas")
+    st.sidebar.link_button("KAGGLE", "https://www.kaggle.com/code/davidagrazo/proyecto-2-setas")
     
 if __name__ == "__main__":
     main()
