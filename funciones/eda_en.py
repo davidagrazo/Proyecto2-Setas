@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 def eda_en():
-    df= pd.read_csv("funciones/mushrooms.csv")
+    df= pd.read_csv("funciones/mushrooms_eda.csv")
 
     with st.expander(label="DataFrame", expanded=False):
         st.dataframe(df)
