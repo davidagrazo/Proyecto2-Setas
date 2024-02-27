@@ -24,8 +24,9 @@ def main():
     st.sidebar.link_button("Alex Garea", "https://www.linkedin.com/in/alex-garea-4981a6282/")
     st.sidebar.link_button("David Agrazo", "https://www.linkedin.com/in/davidagrazods/")
 
-    st.sidebar.add_vertical_space(2)
-    st.sidebar.link_button("REPO IN KAGGLE", "https://www.kaggle.com/code/davidagrazo/proyecto-2-setas")
+    st.sidebar.markdown('<div style="text-align: justify;">ACCESO AL REPOSITORIO EN KAGGLE</p></div>',
+        unsafe_allow_html=True)
+    st.sidebar.link_button("KAGGLE", "https://www.kaggle.com/code/davidagrazo/proyecto-2-setas")
     
 if __name__ == "__main__":
     main()
