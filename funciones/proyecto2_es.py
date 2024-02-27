@@ -25,7 +25,7 @@ def proyecto2es():
             '<div style="text-align: justify;">Para que veáis el trabajo realizado, os dejamos la zona de EDA, donde podréis comprobar como se distribuyen los datos por característica. En la parte del modelo, os animamos a que elijáis entre las diferentes opciones para la comprobacion de si una 🍄 es comestible o venenosa</p></div>',
             unsafe_allow_html=True)
 
-
+    
     tab1, tab2 = st.tabs(["EDA", "MACHILE LEARNING"])
     
     tab1.subheader("EDA")

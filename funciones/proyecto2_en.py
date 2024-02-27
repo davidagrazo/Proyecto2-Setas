@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pickle
 import pandas as pd
+from funciones.eda_en import eda_en
 from funciones.ml_en import modelo_filtrado_en
 
 
@@ -17,15 +18,25 @@ def proyecto2en():
         '<div style="text-align: justify;">At the EDA we realized that some characteristics had a great weight when predicting the result, which was confirmed when testing the different Machine Learning classification models, where most of the models gave 100% for both Accuracy, Precision and Recall</p></div>',
         unsafe_allow_html=True)
     st.markdown(
-        '<div style="text-align: justify;">That made us review the project to give a little more value to it, and we decided to check for each type of characteristic what its precision would be. To make the prediction we use the RandomForest model. We encourage you to choose between the different options to check whether a 🍄 is edible or poisonous</p></div>',
+        '<div style="text-align: justify;">That made us review the project to give a little more value to it, and we decided to check for each type of characteristic what its precision would be. To make the prediction we use the RandomForest model.</p></div>',
+        unsafe_allow_html=True)
+    st.markdown(
+        '<div style="text-align: justify;">To check our job, we include our EDA, with the distribution by characteristic. In the ML model, we encourage you to choose between the different options to check whether a 🍄 is edible or poisonous</p></div>',
         unsafe_allow_html=True)
 
-    st.subheader("ML'S MODEL: MUSHROOMS, ¿EDIBLES O POISONOUS?")
+    tab1, tab2 = st.tabs(["EDA", "MACHILE LEARNING"])
+
+    tab1.subheader("EDA")
+
+    with tab1:
+        eda_en()
+    
+    tab2.subheader("ML'S MODEL: MUSHROOMS, ¿EDIBLES O POISONOUS?")
 
     df = pd.read_csv("funciones/mushrooms_eda.csv").drop('CLASS', axis=1)
     df2 = pd.read_csv("funciones/mushrooms_eda.csv")
 
-    with st.expander(label="DataFrame", expanded=False):
+    with tab2.expander(label="DataFrame", expanded=False):
         st.dataframe(df2)
 
     cap = [x for x in df.columns if 'CAP' in x]
@@ -39,7 +50,7 @@ def proyecto2en():
     datos = []
     seleccion = []
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = tab2.columns(3)
     with col1:
         st.header('CAP')
         # Cap
